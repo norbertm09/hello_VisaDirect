@@ -2,7 +2,8 @@ import requests
 import json
 import sys, os
 import datetime
-
+cert_content = os.getenv("VISA_CERT_PEM")
+cert_content = os.getenv("VISA_KEY_PEM")
 # print(datetime.datetime.now())
 date=datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 # print(date)
