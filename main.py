@@ -11,12 +11,14 @@ url='https://sandbox.api.visa.com/visadirect/fundstransfer/v1/pullfundstransacti
 
 # cert='/home/avibomb/Desktop/Hello/cert.perm'
 cert_content = os.getenv("VISA_CERT_PEM")
+cert_content = os.getenv("VISA_KEY_PEM")
+
 cert_path = "Visa_cert.pem"
 with open(cert_path, "w") as f:
     f.write(cert_content)
 cert=os.path.abspath("Visa_cert.pem")
 # key='key_test.pem'
-cert_content = os.getenv("VISA_KEY_PEM")
+
 cert_path = "Visa_key.pem"
 with open(cert_path, "w") as f:
     f.write(key_content)
