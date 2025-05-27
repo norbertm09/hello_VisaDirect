@@ -10,8 +10,16 @@ date=datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 url='https://sandbox.api.visa.com/visadirect/fundstransfer/v1/pullfundstransactions'
 
 # cert='/home/avibomb/Desktop/Hello/cert.perm'
+cert_content = os.getenv("VISA_CERT_PEM")
+cert_path = "Visa_cert.pem"
+with open(cert_path, "w") as f:
+    f.write(cert_content)
 cert=os.path.abspath("Visa_cert.pem")
 # key='key_test.pem'
+cert_content = os.getenv("VISA_KEY_PEM")
+cert_path = "Visa_key.pem"
+with open(cert_path, "w") as f:
+    f.write(key_content)
 key=os.path.abspath("Visa_key.pem")
 
 headers={"Accept": "application/json"}
