@@ -10,14 +10,14 @@ date=datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 url='https://sandbox.api.visa.com/visaaliasdirectory/v1/manage/createalias'
 
 # cert='/home/avibomb/Desktop/Hello/cert.perm'
-cert=os.path.abspath("cert.pem")
+cert=os.path.abspath("visa_cert.pem")
 # key='key_test.pem'
-key=os.path.abspath("key_test.pem")
+key=os.path.abspath("Visa_key.pem")
 
 headers={"Accept": "application/json"}
 
-user_id='H5T2QIDG2IJOP7L6M1W221bkXTIK_ghOLL4FpzeNLid4v8Mcc'
-password='qcgUdXX24YCZENvm54u0kzCk'
+user_id='M86X7RZ20QN7GKO7D2XZ21TuC1aCB63azYVa9tY8ehpDs96Eg'
+password='fgoHAN3L959zDw5q2hGA7'
 
 body={}
 
