@@ -2,8 +2,7 @@ import requests
 import json
 import sys, os
 import datetime
-cert_content = os.getenv("VISA_CERT_PEM")
-cert_content = os.getenv("VISA_KEY_PEM")
+
 # print(datetime.datetime.now())
 date=datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 # print(date)
@@ -13,15 +12,11 @@ url='https://sandbox.api.visa.com/visadirect/fundstransfer/v1/pullfundstransacti
 # cert='/home/avibomb/Desktop/Hello/cert.perm'
 
 
-cert_path = "Visa_cert.pem"
-with open(cert_path, "w") as f:
-    f.write(cert_content)
+
 cert=os.path.abspath("Visa_cert.pem")
 # key='key_test.pem'
 
-cert_path = "Visa_key.pem"
-with open(cert_path, "w") as f:
-    f.write(key_content)
+
 key=os.path.abspath("Visa_key.pem")
 
 headers={"Accept": "application/json"}
